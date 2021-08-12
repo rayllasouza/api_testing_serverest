@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://gorest.co.in/public/v1",
+    "env": {
+        "global_timeout": 30000,
+        "environment": "GOREST"
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "required": [
+        "meta",
+        "data"
+    ],
+    "properties": {
+        "meta": {
+            "type": "object",
+            "required": [
+                "pagination"
+            ],
+            "properties": {
+                "pagination": {
+                    "type": "object",
+                    "required": [
+                        "total",
+                        "pages",
+                        "page",
+                        "limit",
+                        "links"
+                    ],
+                    "properties": {
+                        "total": {
+                            "type": "integer"
+                        },
+                        "pages": {
+                            "type": "integer"
+                        },
+                        "page": {
+                            "type": "integer"
+                        },
+                        "limit": {
+                            "type": "integer"
+                        },
+                        "links": {
+                            "type": "object",
+                            "required": [
+                                "previous",
+                                "current",
+                                "next"
+                            ],
+                            "properties": {
+                                "previous": {
+                                    "type": "null"
+                                },
+                                "current": {
+                                    "type": "string"
+                                },
+                                "next": {
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        },
+        "data": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "email",
+                    "gender",
+                    "status"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": true
+            }
+        }
+    },
+    "additionalProperties": true
+}
